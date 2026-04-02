@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEHB Summit '26 — Brand Book Sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Serif+Display&family=Fira+Code&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Nunito:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Instrument Serif', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Amber Atlas */
+  --a-primary: #F59E0B;
+  --a-dark: #18120B;
+  --a-light: #FFFBEB;
+  --a-accent: #B45309;
+  --a-glow: #FDE68A;
+  --a-coral: #F97316;
+  --a-green: #15803D;
+
+  /* Coral Pulse */
+  --b-primary: #F43F5E;
+  --b-dark: #0F172A;
+  --b-dark2: #1E293B;
+  --b-light: #FFF1F2;
+  --b-accent: #3B82F6;
+  --b-glow: #FFE4E6;
+  --b-lime: #84CC16;
+
+  /* Terra Nova */
+  --c-primary: #0D9488;
+  --c-dark: #1C1917;
+  --c-light: #F5F0EB;
+  --c-accent: #C2410C;
+  --c-glow: #CCFBF1;
+  --c-gold: #D4A847;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: #0A0A0A;
+  color: #E5E5E5;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,10,10,0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0 2rem;
+  display: flex; align-items: center; gap: 1.5rem;
+  height: 52px;
+  overflow-x: auto;
+}
+nav::-webkit-scrollbar { display: none; }
+nav a {
+  color: #777; text-decoration: none; font-size: 0.75rem;
+  font-family: var(--font-display); font-weight: 500;
+  letter-spacing: 0.03em; transition: color 0.25s;
+  white-space: nowrap;
+}
+nav a:hover { color: #fff; }
+nav .brand {
+  color: #F59E0B; font-weight: 800; font-size: 0.8rem;
+  letter-spacing: 0.04em; margin-right: 0.5rem;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 7rem 2rem 5rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+p { max-width: 680px; color: #999; margin-bottom: 1rem; font-size: 0.95rem; }
+
+.tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* ===== HERO ===== */
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 0;
+}
+#hero h1 { font-size: clamp(3.5rem, 9vw, 8rem); margin-bottom: 0.4rem; letter-spacing: -0.02em; }
+#hero .tagline { font-size: clamp(1.1rem, 2.5vw, 1.7rem); margin-bottom: 2.5rem; }
+#hero .meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #555;
+  letter-spacing: 0.12em;
+}
+.hero-glow {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ===== MANIFESTO ===== */
+.manifesto {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: #bbb;
+  max-width: 640px;
+  margin: 2rem 0;
+}
+.manifesto .highlight {
+  color: #F59E0B;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ===== GRID LAYOUTS ===== */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 1.5rem 0; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 1.5rem 0; }
+
+@media (max-width: 1000px) {
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+.card:hover { border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.035); }
+
+/* ===== FONT SPECIMEN ===== */
+.font-specimen {
+  padding: 1.75rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 0.75rem;
+}
+.font-specimen .label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #555;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== PALETTE ===== */
+.palette-row {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  flex-wrap: wrap;
+}
+.swatch-group { text-align: center; }
+.swatch {
+  width: 56px; height: 56px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s;
+}
+.swatch:hover { transform: scale(1.08); }
+.swatch-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ===== BRANDING SECTION ===== */
+.branding-hero {
+  padding: 3.5rem 3rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.branding-hero h2 { position: relative; z-index: 1; margin-bottom: 0.5rem; }
+.branding-hero p { position: relative; z-index: 1; }
+.branding-hero .soul {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  position: relative; z-index: 1;
+}
+.branding-hero .mood {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.05rem;
+  position: relative; z-index: 1;
+}
+
+.branding-a .branding-hero {
+  background: linear-gradient(135deg, #18120B 0%, #1a150d 100%);
+  border: 1px solid rgba(245,158,11,0.12);
+}
+.branding-a .branding-hero .soul { color: var(--a-glow); }
+.branding-a .branding-hero h2 { color: var(--a-primary); }
+.branding-a .branding-hero .mood { color: var(--a-glow); }
+
+.branding-b .branding-hero {
+  background: linear-gradient(135deg, #0F172A 0%, #131b32 100%);
+  border: 1px solid rgba(244,63,94,0.12);
+}
+.branding-b .branding-hero .soul { color: var(--b-accent); }
+.branding-b .branding-hero h2 { color: #fff; }
+.branding-b .branding-hero .mood { color: var(--b-primary); }
+
+.branding-c .branding-hero {
+  background: linear-gradient(135deg, #1C1917 0%, #1e1c19 100%);
+  border: 1px solid rgba(13,148,136,0.12);
+}
+.branding-c .branding-hero .soul { color: var(--c-accent); }
+.branding-c .branding-hero h2 { color: var(--c-light); }
+.branding-c .branding-hero .mood { color: var(--c-primary); }
+
+/* ===== SUB-SECTION HEADERS ===== */
+.sub-header {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  letter-spacing: 0.02em;
+}
+
+/* ===== IMAGE GRID ===== */
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.visual-item {
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.3s, box-shadow 0.3s;
+}
+.visual-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.visual-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #111;
+  min-height: 160px;
+}
+.visual-item .caption {
+  padding: 0.8rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visual-item .caption .name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+.visual-item .caption .tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #555;
+  letter-spacing: 0.05em;
+}
+
+.visual-item.wide {
+  grid-column: 1 / -1;
+}
+.visual-item.wide img {
+  max-height: 460px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .visual-grid { grid-template-columns: 1fr; }
+  .visual-item.wide { grid-column: auto; }
+}
+
+/* ===== COMPARISON TABLE ===== */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.82rem;
+}
+.compare-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #777;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+.compare-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  color: #bbb;
+}
+.compare-table tr:hover td { background: rgba(255,255,255,0.015); }
+.compare-table .high { color: #4ade80; }
+.compare-table .mid { color: #fbbf24; }
+.compare-table .low { color: #f87171; }
+.compare-table .label-cell {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: #888;
+}
+
+/* ===== SYSTEM PROMPT ===== */
+.system-prompt {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.8;
+  color: #777;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  margin: 3.5rem 0;
+}
+
+/* ===== BADGE COLORS ===== */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+}
+.badge-a { background: rgba(245,158,11,0.12); color: #F59E0B; }
+.badge-b { background: rgba(244,63,94,0.12); color: #F43F5E; }
+.badge-c { background: rgba(13,148,136,0.12); color: #0D9488; }
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-down {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.7; } }
+
+/* ===== TONE TABLE ===== */
+.tone-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.82rem;
+}
+.tone-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #777;
+  font-size: 0.75rem;
+}
+.tone-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.tone-table .yes { color: #4ade80; }
+.tone-table .no { color: #f87171; }
+
+/* ===== MOTIF CARD ===== */
+.motif-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.motif-card .motif-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+.motif-card p { font-size: 0.82rem; color: #888; margin-bottom: 0; }
+
+/* ===== PHOTO DIRECTION ===== */
+.photo-direction {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 0.75rem 0;
+}
+.photo-direction p { font-size: 0.82rem; color: #888; margin-bottom: 0.25rem; }
+.photo-direction .ref {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* ===== MATERIAL ===== */
+.material-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.material-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #888;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="brand">DEHB SUMMIT</a>
+  <a href="#identity">Kimlik</a>
+  <a href="#language">Dil & Manifesto</a>
+  <a href="#branding-a">Amber Atlas</a>
+  <a href="#branding-b">Coral Pulse</a>
+  <a href="#branding-c">Terra Nova</a>
+  <a href="#compare">Karsilastirma</a>
+</nav>
+
+<!-- ================================================================ -->
+<!-- HERO -->
+<!-- ================================================================ -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="section-label">Brand Book v3.0</div>
+  <h1>DEHB SUMMIT '26</h1>
+  <p class="tagline">Dikkat edin, harika biridir.</p>
+  <p class="meta">Istanbul &middot; 23 Ekim 2026 &middot; 1.000+ Katilimci</p>
+  <div class="scroll-down">SCROLL</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- IDENTITY -->
+<!-- ================================================================ -->
+<section id="identity">
+  <div class="section-label">01 / Marka Kimligi & Pozisyonlama</div>
+  <h2>Pozisyonlama</h2>
+  <p>DEHB Summit, norocesiltilik dunya gercekligiyle Turkiye'de ilk kez bulusuyor: aileler, egitimciler, klinisyenler, koclar, is dunyasi ve girisimciler -- herkes ayni sahnede.</p>
+  <p style="color: #F59E0B; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; max-width: 600px;">
+    "DEHB'yi guc olarak goren herkesin bulusma noktasi."
+  </p>
+
+  <hr class="divider">
+
+  <h3>Marka Bagimsizligi</h3>
+  <p>DEHB Summit tamamen bagimsiz bir markadir. Kendi logosu, gorsel kimligi, web sitesi, sosyal medya hesaplari ve tonu vardir. Hicbir diger marka ile "powered by", "by" veya "bir X etkinligidir" iliskisi gosterilmez.</p>
+
+  <hr class="divider">
+
+  <h3>Amac & Vizyon</h3>
+  <div class="grid-2">
+    <div class="card">
+      <h4>Amac</h4>
+      <p style="font-size:0.85rem">DEHB'nin pozitif taraflarina odaklanip norocesilti bireylerin norotipiklerin dunyasinda var olma cabalarini desteklemek.</p>
+    </div>
+    <div class="card">
+      <h4>Vizyon</h4>
+      <p style="font-size:0.85rem">DEHB'yi "uyum saglanacak bir farklilik" degil, "deger uretme kapasitesi" olarak yeniden tanimlayan bir bulusma.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Hedef Kitle</h3>
+  <div class="grid-4">
+    <div class="card">
+      <h4 style="color:#F59E0B">Egitimciler</h4>
+      <p style="font-size:0.82rem">Sinif ici strateji, DEHB farkindaligi. Teshiste en onemli rol.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#F59E0B">IK Uzmanlari</h4>
+      <p style="font-size:0.82rem">DEHB dostu calisma ortami, norodivergent yetenek ise alimi.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#F59E0B">Girisimciler</h4>
+      <p style="font-size:0.82rem">Ilham, network, DEHB'nin yaratici gucu ve risk alma cesareti.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#F59E0B">Bireyler & Aileler</h4>
+      <p style="font-size:0.82rem">Tanima, topluluk, pratik strateji, destek agi.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Rakip Konumlandirma</h3>
+  <table class="compare-table">
+    <tr><th></th><th>CHADD</th><th>World Congress</th><th>NeuroDiversion</th><th style="color:#F59E0B">DEHB Summit</th></tr>
+    <tr><td class="label-cell">Ton</td><td>Nonprofit</td><td>Akademik</td><td>Festival</td><td style="color:#F59E0B">Ciddi + Topluluk</td></tr>
+    <tr><td class="label-cell">Gorsel</td><td>Kurumsal</td><td>Bilimsel</td><td>Renkli</td><td style="color:#F59E0B">Premium + Sicak</td></tr>
+    <tr><td class="label-cell">Dil</td><td>Ingilizce</td><td>Ingilizce</td><td>Ingilizce</td><td style="color:#F59E0B">Turkce</td></tr>
+    <tr><td class="label-cell">Deneyim</td><td>Orta</td><td>Dusuk</td><td>Yuksek</td><td style="color:#F59E0B">Cok Yuksek</td></tr>
+    <tr><td class="label-cell">VIP</td><td>Yok</td><td>Yok</td><td>Yok</td><td style="color:#F59E0B">Var</td></tr>
+  </table>
+</section>
+
+<!-- ================================================================ -->
+<!-- LANGUAGE & MANIFESTO -->
+<!-- ================================================================ -->
+<section id="language">
+  <div class="section-label">02 / Marka Dili & Manifesto</div>
+  <h2>Manifesto</h2>
+
+  <div class="manifesto">
+    DEHB, farkli calisan bir beyin.<br>
+    Bazen yorucu. Bazen parlak. Her zaman gercek.<br><br>
+    Her DEHB'li cocugun arkasinda cevap arayan bir aile var.<br>
+    Her DEHB'li yetiskinin icinde, coktan vazgecilmis hayaller var.<br>
+    Her klinisyenin masasinda, "keskin ama odaklanamiyorum" diyen biri var.<br><br>
+    Hepimiz ayni seyi ariyoruz: <span class="highlight">anlasilmak.</span><br><br>
+    DEHB Summit, bu arayisi bir araya getiriyor.<br>
+    Aileler, klinisyenler, koclar, egitimciler, calisanlar<br>
+    ve DEHB'yle yasayan herkes -- ayni sahnede.<br><br>
+    Cunku birlikte biliyoruz:<br>
+    farkli calisan beyin, farkli goren beyin demek.<br>
+    Ve <span class="highlight">farkli goren beyinler dunyayi degistirir.</span><br><br>
+    Istanbul. Ekim 2026.<br>
+    Turkiye'nin ilk DEHB Zirvesi.<br><br>
+    <span class="highlight">Dikkat edin, harika biridir.</span>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Marka Tonu</h3>
+  <table class="tone-table">
+    <tr><th>Ozellik</th><th class="yes">Evet</th><th class="no">Hayir</th></tr>
+    <tr><td>Ciddi</td><td class="yes">Ciddi ama soguk degil</td><td class="no">Akademik jargon</td></tr>
+    <tr><td>Sicak</td><td class="yes">Samimi ama cringe degil</td><td class="no">Toksik pozitiflik</td></tr>
+    <tr><td>Guclu</td><td class="yes">Cesaretlendirici ama vaaz degil</td><td class="no">"Sen de yapabilirsin!" klisesi</td></tr>
+    <tr><td>Bilimsel</td><td class="yes">Kanita dayali</td><td class="no">Baskilayici ton</td></tr>
+    <tr><td>Kapsayici</td><td class="yes">Herkesi kuclayan</td><td class="no">"Biz vs onlar"</td></tr>
+  </table>
+
+  <hr class="divider">
+
+  <h3>Dil Kurallari</h3>
+  <div class="grid-2">
+    <div class="card">
+      <h4 style="color:#4ade80">Kullan</h4>
+      <p style="font-size:0.82rem">Norocesiltilik, farkli calisan beyin, DEHB'li birey, guc, strateji, dikkat farkliligi.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#f87171">Kullanma</h4>
+      <p style="font-size:0.82rem">Bozukluk, hasta/hastasi, tedavi (yerine: strateji/yonetim/destek), normal (yerine: norotipik), "herkes biraz DEHB'lidir".</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Slogan & Destekleyici Mesajlar</h3>
+  <div class="grid-2">
+    <div class="card" style="border-color: rgba(245,158,11,0.15);">
+      <p style="color:#F59E0B; font-family:var(--font-display); font-weight:700; font-size:1.2rem; margin-bottom:0.4rem;">Dikkat edin, harika biridir.</p>
+      <p style="font-size:0.78rem; color:#777;">Ana slogan -- cift anlamli, kisilestiren, guc cercevesi</p>
+    </div>
+    <div class="card">
+      <p style="color:#ccc; font-size:0.9rem; margin-bottom:0.25rem;">Farkli calismak, birlikte buyumek.</p>
+      <p style="color:#ccc; font-size:0.9rem; margin-bottom:0.25rem;">1.000 farkli beyin. 1 sahne.</p>
+      <p style="color:#ccc; font-size:0.9rem; margin-bottom:0.25rem;">Turkiye'nin ilk DEHB Zirvesi.</p>
+      <p style="color:#ccc; font-size:0.9rem;">Farkli goren beyinler dunyayi degistirir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- BRANDING A: AMBER ATLAS -->
+<!-- ================================================================ -->
+<section id="branding-a" class="branding-a">
+  <div class="section-label">03 / Branding Secenegi A</div>
+
+  <!-- a) Identity Brief -->
+  <div class="branding-hero">
+    <div class="soul">The Institution</div>
+    <h2>Amber Atlas</h2>
+    <p class="mood">Prestijli bir odul toreninin sicakligi.</p>
+    <p style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:1rem; max-width:600px;">
+      Met Gala'nin format disiplini, Cannes'in isik tasarimi, bir Oscar toreninin sahne yuceligi -- ama soguk degil, sicak. Istanbul'un golden hour'u, Kapalicarsi'nin altin isiklandirmasi. Bu marka "buyuk" hissettirir. Bir kurumun agirligini tasiyor ama asla kasvetli degil -- altinin sicakligi her dokunusu insancillestirir.
+    </p>
+  </div>
+
+  <!-- b) Color Palette -->
+  <div class="sub-header">Renk Paleti</div>
+  <div class="palette-row">
+    <div class="swatch-group"><div class="swatch" style="background:#F59E0B"></div><div class="swatch-label">Summit Gold<br>#F59E0B</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#B45309"></div><div class="swatch-label">Deep Amber<br>#B45309</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#FDE68A"></div><div class="swatch-label">Light Gold<br>#FDE68A</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#18120B"></div><div class="swatch-label">Warm Black<br>#18120B</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#FFFBEB; border-color:rgba(0,0,0,0.1)"></div><div class="swatch-label">Parchment<br>#FFFBEB</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#F97316"></div><div class="swatch-label">Warm Coral<br>#F97316</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#15803D"></div><div class="swatch-label">Forest Green<br>#15803D</div></div>
+  </div>
+  <p style="font-size:0.75rem; color:#555;">Renk orani: %80 notr (warm black + parchment), %15 Summit Gold, %5 aksanlar.</p>
+
+  <!-- c) Typography Specimen -->
+  <div class="sub-header">Tipografi</div>
+  <div class="grid-2">
+    <div class="font-specimen">
+      <div class="label">Display -- Plus Jakarta Sans 800</div>
+      <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:800; font-size:2.4rem; color:#fff; line-height:1.08; margin-bottom:0;">
+        DEHB SUMMIT
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Body -- Inter 400</div>
+      <p style="font-family:'Inter', sans-serif; font-size:0.95rem; color:#ccc; margin-bottom:0;">
+        Farkli calisan beyin, farkli goren beyin demek. Ve farkli goren beyinler dunyayi degistirir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Accent -- Instrument Serif Italic</div>
+      <p style="font-family:'Instrument Serif', serif; font-style:italic; font-size:1.3rem; color:#ccc; margin-bottom:0;">
+        Dikkat edin, harika biridir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Mono -- JetBrains Mono 400</div>
+      <p style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:#ccc; margin-bottom:0;">
+        23.10.2026 &middot; 09:00-18:30 &middot; 1.000+
+      </p>
+    </div>
+  </div>
+
+  <!-- d) Visual Motifs -->
+  <div class="sub-header">Gorsel Motifler</div>
+  <div class="grid-2">
+    <div class="motif-card">
+      <div class="motif-name" style="color:#F59E0B">"Altin Kivilcim" (Gold Spark)</div>
+      <p>H harfinin yatay cubugu bir sinaps ateslemesine donusur -- logonun imza detayi. Tek basina bir ikon olarak: app ikonu, favicon, bileklik gravuru. Organik, asimetrik, canli.</p>
+    </div>
+    <div class="motif-card">
+      <div class="motif-name" style="color:#F59E0B">"Noron Agi" (Neuron Lattice)</div>
+      <p>Ince altin cizgilerle (0.5px, %10 opacity) birbirine baglanan kucuk noktalar. Arka plan deseni, davetiye kenarligi, sahne LED panellerinde. Her nokta bir birey, her baglanti bir iliski.</p>
+    </div>
+  </div>
+
+  <!-- e) Photography Direction -->
+  <div class="sub-header">Fotograf Yonelimi</div>
+  <div class="photo-direction">
+    <p><strong style="color:#ccc">Isik:</strong> Golden hour, sicak, yonlu. Asla flas, asla duz isik.</p>
+    <p><strong style="color:#ccc">Lens:</strong> 35mm / 50mm prime. f/1.8-2.8. Bokeh sicak tonlarda.</p>
+    <p><strong style="color:#ccc">Yuzey:</strong> Mat siyah mermer, koyu ahsap, pirinc/altin metal, kagit dokusu.</p>
+    <p class="ref" style="margin-top:0.5rem; margin-bottom:0;">Referans: Annie Leibovitz, Apple urun fotografi, Bottega Veneta kampanyasi</p>
+  </div>
+
+  <!-- f) Material Language -->
+  <div class="sub-header">Materyal Dili</div>
+  <div class="material-tags">
+    <span class="material-tag">Mat siyah kagit (300gsm+)</span>
+    <span class="material-tag">Altin folyo (sicak baski)</span>
+    <span class="material-tag">Krem kagit (uncoated)</span>
+    <span class="material-tag">Pirinc / altin metal</span>
+    <span class="material-tag">Siyah pamuk canvas</span>
+    <span class="material-tag">Mermer</span>
+    <span class="material-tag">Koyu ahsap</span>
+  </div>
+
+  <!-- g) System Prompt -->
+  <div class="sub-header">Sistem Promptu</div>
+  <div class="system-prompt">
+    AMBER ATLAS STYLE GUIDE -- Apply to ALL visuals in this set:<br><br>
+    Aesthetic: Premium warm luxury. Think Met Gala staging + Apple product photography + Bottega Veneta campaign.<br><br>
+    COLOR (STRICT -- no deviation):<br>
+    - Hero accent: amber gold (#F59E0B)<br>
+    - Dark base: warm black (#18120B) -- NOT pure black<br>
+    - Light surface: parchment cream (#FFFBEB) -- NOT pure white<br>
+    - No other accent colors unless specified<br><br>
+    LIGHTING: Always warm, directional, golden-hour quality. Key light from upper-left at ~45 degrees, warm color temperature (3200K). Soft shadows, never harsh. Subtle amber bloom/glow on metallic surfaces.<br><br>
+    MATERIALS: Matte black, gold foil, dark marble, dark wood, brass, premium paper<br>
+    TYPOGRAPHY: Bold geometric sans-serif (Plus Jakarta Sans ExtraBold)<br>
+    PHOTOGRAPHY: Editorial quality, shallow DoF (f/1.8-2.8), 50mm prime lens feel<br>
+    MOOD: "Istanbul golden hour meets Oscar ceremony" -- prestigious, warm, never cold<br>
+    AVOID: Pure white, pure black, neon, gradients on text, 3D effects, cartoon, illustration style
+  </div>
+
+  <!-- h) Visual Grid -->
+  <div class="sub-header">Gorseller</div>
+  <div class="visual-grid">
+    <div class="visual-item wide">
+      <img src="images/v3_logo_a.png" alt="Amber Atlas Logo" loading="lazy">
+      <div class="caption"><span class="name">Logo</span><span class="tag badge badge-a">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_landing_a.png" alt="Amber Atlas Landing Page" loading="lazy">
+      <div class="caption"><span class="name">Website Landing Page</span><span class="tag badge badge-a">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_stage_a.png" alt="Amber Atlas Sahne" loading="lazy">
+      <div class="caption"><span class="name">Sahne</span><span class="tag badge badge-a">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_network_a.png" alt="Amber Atlas Networking" loading="lazy">
+      <div class="caption"><span class="name">Networking Alani</span><span class="tag badge badge-a">1:1</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_badge_a.png" alt="Amber Atlas Yaka Karti" loading="lazy">
+      <div class="caption"><span class="name">Yaka Karti</span><span class="tag badge badge-a">3:4</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_outdoor_a.png" alt="Amber Atlas Outdoor" loading="lazy">
+      <div class="caption"><span class="name">Outdoor Reklam</span><span class="tag badge badge-a">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_social_a.png" alt="Amber Atlas Social" loading="lazy">
+      <div class="caption"><span class="name">Sosyal Medya</span><span class="tag badge badge-a">1:1</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- BRANDING B: CORAL PULSE -->
+<!-- ================================================================ -->
+<section id="branding-b" class="branding-b">
+  <div class="section-label">04 / Branding Secenegi B</div>
+
+  <!-- a) Identity Brief -->
+  <div class="branding-hero">
+    <div class="soul">The Movement</div>
+    <h2>Coral Pulse</h2>
+    <p class="mood">Bir teknoloji konferansinin gece enerjisi.</p>
+    <p style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:1rem; max-width:600px;">
+      Web Summit'in cesur sahne tasarimi, Apple WWDC'nin urun lansman enerjisi, Spotify Wrapped'in gorsel ceskisi. Bu marka "simdi oluyor" hissi verir -- elektrik, nabiz, enerji. Gece. Neon. Ekranlar. Lacivert derinlik. Coral isik parcalamalari. Klinik degil ama ciddi. Festival degil ama canli.
+    </p>
+  </div>
+
+  <!-- b) Color Palette -->
+  <div class="sub-header">Renk Paleti</div>
+  <div class="palette-row">
+    <div class="swatch-group"><div class="swatch" style="background:#F43F5E"></div><div class="swatch-label">Coral Rose<br>#F43F5E</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#BE123C"></div><div class="swatch-label">Deep Rose<br>#BE123C</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#FFE4E6; border-color:rgba(0,0,0,0.1)"></div><div class="swatch-label">Blush<br>#FFE4E6</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#0F172A"></div><div class="swatch-label">Midnight Navy<br>#0F172A</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#FFF1F2; border-color:rgba(0,0,0,0.1)"></div><div class="swatch-label">Snow Rose<br>#FFF1F2</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#3B82F6"></div><div class="swatch-label">Electric Blue<br>#3B82F6</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#84CC16"></div><div class="swatch-label">Lime<br>#84CC16</div></div>
+  </div>
+  <p style="font-size:0.75rem; color:#555;">Ozel kural: "DEHB" her zaman saf beyaz (#FFFFFF), "SUMMIT '26" her zaman coral.</p>
+
+  <!-- c) Typography Specimen -->
+  <div class="sub-header">Tipografi</div>
+  <div class="grid-2">
+    <div class="font-specimen">
+      <div class="label">Display -- Space Grotesk 700</div>
+      <p style="font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:2.4rem; color:#fff; line-height:1.08; margin-bottom:0;">
+        DEHB SUMMIT
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Body -- DM Sans 400</div>
+      <p style="font-family:'DM Sans', sans-serif; font-size:0.95rem; color:#ccc; margin-bottom:0;">
+        Farkli calisan beyin, farkli goren beyin demek. Ve farkli goren beyinler dunyayi degistirir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Accent -- DM Sans Italic (no serif anywhere)</div>
+      <p style="font-family:'DM Sans', sans-serif; font-style:italic; font-size:1.3rem; color:#ccc; margin-bottom:0;">
+        Dikkat edin, harika biridir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Mono -- Fira Code 400</div>
+      <p style="font-family:'Fira Code', monospace; font-size:0.85rem; color:#ccc; margin-bottom:0;">
+        23.10.2026 &middot; 09:00-18:30 &middot; 1.000+
+      </p>
+    </div>
+  </div>
+  <p style="font-size:0.75rem; color:#555; margin-top:0.5rem;">Ozel kural: Bu kimlikte hicbir yerde serif font kullanilmaz. Tum iletisim sans-serif. Dijital-native kimlik.</p>
+
+  <!-- d) Visual Motifs -->
+  <div class="sub-header">Gorsel Motifler</div>
+  <div class="grid-2">
+    <div class="motif-card">
+      <div class="motif-name" style="color:#F43F5E">"Nabiz Cizgisi" (Pulse Line)</div>
+      <p>EEG brainwave'den esinlenen 3-4 tepeli dalga -- logoda DEHB'nin son harfinden saga akar. Web'de section ayirici, badge'de dekoratif cizgi, sahne kenarinda LED animasyon. Asimetrik, organik, asla mekanik.</p>
+    </div>
+    <div class="motif-card">
+      <div class="motif-name" style="color:#F43F5E">"Glow Edge" (LED Edge Accent)</div>
+      <p>Her fiziksel materyalin kenarinda ince bir coral LED isik cizgisi. Badge, notebook, podium -- karanlik ortamda her obje kendini belli eder. Kimligin imzasi.</p>
+    </div>
+  </div>
+
+  <!-- e) Photography Direction -->
+  <div class="sub-header">Fotograf Yonelimi</div>
+  <div class="photo-direction">
+    <p><strong style="color:#ccc">Isik:</strong> Gece, dramatik, yonlu, sert kontrastlar. Key light soguk (5600K), accent light coral/sicak.</p>
+    <p><strong style="color:#ccc">Lens:</strong> 35mm / 24mm. Dusuk acidan (low angle) cekimler -- guc ve buyukluk hissi.</p>
+    <p><strong style="color:#ccc">Yuzey:</strong> Parlak akrilik, cam, LED ekranlar, metal, beton. Yansimalar onemli -- islak zemin, cam yuzeyler.</p>
+    <p class="ref" style="margin-top:0.5rem; margin-bottom:0;">Referans: Sam Cannon konser fotografi, Apple WWDC, Blade Runner 2049</p>
+  </div>
+
+  <!-- f) Material Language -->
+  <div class="sub-header">Materyal Dili</div>
+  <div class="material-tags">
+    <span class="material-tag">Koyu lacivert kagit (300gsm)</span>
+    <span class="material-tag">Coral folyo detay</span>
+    <span class="material-tag">Seffaf akrilik</span>
+    <span class="material-tag">Kenar LED aydinlatma</span>
+    <span class="material-tag">Brushed steel</span>
+    <span class="material-tag">Lacivert kumas</span>
+    <span class="material-tag">Cam / metal</span>
+  </div>
+
+  <!-- g) System Prompt -->
+  <div class="sub-header">Sistem Promptu</div>
+  <div class="system-prompt">
+    CORAL PULSE STYLE GUIDE -- Apply to ALL visuals in this set:<br><br>
+    Aesthetic: Modern tech conference at night. Think Web Summit main stage + Apple WWDC energy + Spotify Wrapped boldness.<br><br>
+    COLOR (STRICT):<br>
+    - Hero accent: coral rose (#F43F5E)<br>
+    - Dark base: midnight navy (#0F172A) -- NOT pure black, always navy<br>
+    - "DEHB" text: always pure white (#FFFFFF)<br>
+    - "SUMMIT '26" text: always coral (#F43F5E)<br>
+    - Secondary accent: electric blue (#3B82F6)<br><br>
+    LIGHTING: Night/indoor dramatic. Cool base (5600K) with warm coral accent lights. Hard directional key light from the side. Coral neon glow on edges. High contrast.<br><br>
+    MATERIALS: Acrylic, glass, brushed metal, LED strips, navy fabric with coral stitching<br>
+    TYPOGRAPHY: Geometric sans-serif (Space Grotesk Bold), NO SERIF anywhere<br>
+    PHOTOGRAPHY: Dramatic, high-contrast, low-angle, nighttime energy<br>
+    MOOD: "Web Summit meets Headspace" -- electric, bold, alive, never passive<br>
+    AVOID: Warm tones, natural light, wood, linen, vintage feel, serif fonts, pastoral imagery
+  </div>
+
+  <!-- h) Visual Grid -->
+  <div class="sub-header">Gorseller</div>
+  <div class="visual-grid">
+    <div class="visual-item wide">
+      <img src="images/v3_logo_b.png" alt="Coral Pulse Logo" loading="lazy">
+      <div class="caption"><span class="name">Logo</span><span class="tag badge badge-b">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_landing_b.png" alt="Coral Pulse Landing Page" loading="lazy">
+      <div class="caption"><span class="name">Website Landing Page</span><span class="tag badge badge-b">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_stage_b.png" alt="Coral Pulse Sahne" loading="lazy">
+      <div class="caption"><span class="name">Sahne</span><span class="tag badge badge-b">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_network_b.png" alt="Coral Pulse Networking" loading="lazy">
+      <div class="caption"><span class="name">Networking Alani</span><span class="tag badge badge-b">1:1</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_badge_b.png" alt="Coral Pulse Yaka Karti" loading="lazy">
+      <div class="caption"><span class="name">Yaka Karti</span><span class="tag badge badge-b">3:4</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_outdoor_b.png" alt="Coral Pulse Outdoor" loading="lazy">
+      <div class="caption"><span class="name">Outdoor Reklam</span><span class="tag badge badge-b">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_social_b.png" alt="Coral Pulse Social" loading="lazy">
+      <div class="caption"><span class="name">Sosyal Medya</span><span class="tag badge badge-b">1:1</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- BRANDING C: TERRA NOVA -->
+<!-- ================================================================ -->
+<section id="branding-c" class="branding-c">
+  <div class="section-label">05 / Branding Secenegi C</div>
+
+  <!-- a) Identity Brief -->
+  <div class="branding-hero">
+    <div class="soul">The Sanctuary</div>
+    <h2>Terra Nova</h2>
+    <p class="mood">Bir bilim konferansinin icindesiniz ama botanik bahcesinde.</p>
+    <p style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:1rem; max-width:600px;">
+      Aesop'un minimalist magaza tasarimi, Soho House'un dogal malzeme obsesyonu, Kinfolk dergisinin fotografik dili. Bu marka "guvendesin ve deger goruyorsun" hissi verir. Dogal isik. Bitki. Keten. Seramik. Ahsap. Her materyal elle dokunulmus. Dijital degil, organik. Ama naif degil -- bilimsel ciddiyet var.
+    </p>
+  </div>
+
+  <!-- b) Color Palette -->
+  <div class="sub-header">Renk Paleti</div>
+  <div class="palette-row">
+    <div class="swatch-group"><div class="swatch" style="background:#0D9488"></div><div class="swatch-label">Teal<br>#0D9488</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#115E59"></div><div class="swatch-label">Deep Teal<br>#115E59</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#CCFBF1; border-color:rgba(0,0,0,0.1)"></div><div class="swatch-label">Mint Mist<br>#CCFBF1</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#1C1917"></div><div class="swatch-label">Earth Dark<br>#1C1917</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#F5F0EB; border-color:rgba(0,0,0,0.1)"></div><div class="swatch-label">Warm Stone<br>#F5F0EB</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#C2410C"></div><div class="swatch-label">Terracotta<br>#C2410C</div></div>
+    <div class="swatch-group"><div class="swatch" style="background:#D4A847"></div><div class="swatch-label">Sand Gold<br>#D4A847</div></div>
+  </div>
+  <p style="font-size:0.75rem; color:#555;">Ozel kural: Teal ve terracotta birlikte infinity sembolunde kullanilir -- marka imzasi.</p>
+
+  <!-- c) Typography Specimen -->
+  <div class="sub-header">Tipografi</div>
+  <div class="grid-2">
+    <div class="font-specimen">
+      <div class="label">Display -- DM Serif Display 400</div>
+      <p style="font-family:'DM Serif Display', serif; font-weight:400; font-size:2.4rem; color:#fff; line-height:1.08; margin-bottom:0;">
+        DEHB SUMMIT
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Body -- Source Sans 3, 400</div>
+      <p style="font-family:'Source Sans 3', sans-serif; font-size:0.95rem; color:#ccc; margin-bottom:0;">
+        Farkli calisan beyin, farkli goren beyin demek. Ve farkli goren beyinler dunyayi degistirir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Accent -- Instrument Serif Italic</div>
+      <p style="font-family:'Instrument Serif', serif; font-style:italic; font-size:1.3rem; color:#ccc; margin-bottom:0;">
+        Dikkat edin, harika biridir.
+      </p>
+    </div>
+    <div class="font-specimen">
+      <div class="label">Mono -- JetBrains Mono 400</div>
+      <p style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:#ccc; margin-bottom:0;">
+        23.10.2026 &middot; 09:00-18:30 &middot; 1.000+
+      </p>
+    </div>
+  </div>
+  <p style="font-size:0.75rem; color:#555; margin-top:0.5rem;">Display serif + body sans kombinasyonu kasitli -- bilimsel ciddiyet (serif) ile modern erisilebilirlik (sans) arasinda kopru.</p>
+
+  <!-- d) Visual Motifs -->
+  <div class="sub-header">Gorsel Motifler</div>
+  <div class="grid-2">
+    <div class="motif-card">
+      <div class="motif-name" style="color:#0D9488">"Sonsuzluk Dongusu" (Infinity Loop)</div>
+      <p>Norodiversity sembolunden esinlenen infinity isareti -- sol yarisi teal, sag yarisi terracotta. Ince, organik, firca darbesi hissi. Logonun yaninda, badge'de, tum materyallerde tekrarlar.</p>
+    </div>
+    <div class="motif-card">
+      <div class="motif-name" style="color:#0D9488">"Botanik Cizgi" (Botanical Line)</div>
+      <p>Ince teal cizgilerle ciziilmis yaprak ve dal siluetleri -- basitlestirilmis, soyut ama bitkisel. Section ayirici, program kitapciginda sayfa kosesi. Kurutulmus bitki baskisi estetiginden esinlenme.</p>
+    </div>
+  </div>
+
+  <!-- e) Photography Direction -->
+  <div class="sub-header">Fotograf Yonelimi</div>
+  <div class="photo-direction">
+    <p><strong style="color:#ccc">Isik:</strong> Sabah isigi, pencere isigi, dogal. Gunes saat 8-10 arasi, yumusak, yaygin.</p>
+    <p><strong style="color:#ccc">Lens:</strong> 50mm / 85mm. f/2-2.8. Bokeh yumusak, dogal yesillik blur'leri.</p>
+    <p><strong style="color:#ccc">Yuzey:</strong> Dogal ahsap, keten kumas, seramik, tas, canli bitki, kraft kagit.</p>
+    <p class="ref" style="margin-top:0.5rem; margin-bottom:0;">Referans: Kinfolk Magazine, Aesop magaza, Muji katalogu, Studio Mumbai</p>
+  </div>
+
+  <!-- f) Material Language -->
+  <div class="sub-header">Materyal Dili</div>
+  <div class="material-tags">
+    <span class="material-tag">Kraft kagit (280gsm, uncoated)</span>
+    <span class="material-tag">Teal folyo (sicak baski)</span>
+    <span class="material-tag">Dogal keten kumas</span>
+    <span class="material-tag">Seramik</span>
+    <span class="material-tag">Canli bitki</span>
+    <span class="material-tag">Geri donusumlu kagit</span>
+    <span class="material-tag">Ahsap (mese, ceviz)</span>
+  </div>
+
+  <!-- g) System Prompt -->
+  <div class="sub-header">Sistem Promptu</div>
+  <div class="system-prompt">
+    TERRA NOVA STYLE GUIDE -- Apply to ALL visuals in this set:<br><br>
+    Aesthetic: Organic wellness meets scientific rigor. Think Aesop flagship store + Soho House natural materials + Kinfolk magazine photography + Stanford d.school.<br><br>
+    COLOR (STRICT):<br>
+    - Hero accent: teal (#0D9488)<br>
+    - Dark base: warm earth dark (#1C1917) -- NOT cool gray, always warm<br>
+    - Light surface: warm stone (#F5F0EB) -- NOT white, always warm cream-stone<br>
+    - Secondary accent: terracotta (#C2410C)<br>
+    - The infinity symbol always: left half teal, right half terracotta<br><br>
+    LIGHTING: Always natural, soft, warm -- morning light through a large window. Diffused, wrapping, minimal shadows. Color temp: 4500-5000K.<br><br>
+    MATERIALS: Natural wood (oak, walnut), linen, kraft paper, ceramic, stone, living plants<br>
+    TYPOGRAPHY: Warm serif for display (DM Serif Display), clean sans-serif for body<br>
+    PHOTOGRAPHY: Kinfolk magazine style -- soft, natural light, f/2-2.8, 50-85mm<br>
+    MOOD: "A botanical garden that hosts TED talks" -- grounded, alive, intellectually warm<br>
+    AVOID: Neon, LED, acrylic, glossy surfaces, dark rooms, dramatic lighting, cold tones, synthetic materials
+  </div>
+
+  <!-- h) Visual Grid -->
+  <div class="sub-header">Gorseller</div>
+  <div class="visual-grid">
+    <div class="visual-item wide">
+      <img src="images/v3_logo_c.png" alt="Terra Nova Logo" loading="lazy">
+      <div class="caption"><span class="name">Logo</span><span class="tag badge badge-c">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_landing_c.png" alt="Terra Nova Landing Page" loading="lazy">
+      <div class="caption"><span class="name">Website Landing Page</span><span class="tag badge badge-c">16:9</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_stage_c.png" alt="Terra Nova Sahne" loading="lazy">
+      <div class="caption"><span class="name">Sahne</span><span class="tag badge badge-c">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_network_c.png" alt="Terra Nova Networking" loading="lazy">
+      <div class="caption"><span class="name">Networking Alani</span><span class="tag badge badge-c">1:1</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_badge_c.png" alt="Terra Nova Yaka Karti" loading="lazy">
+      <div class="caption"><span class="name">Yaka Karti</span><span class="tag badge badge-c">3:4</span></div>
+    </div>
+    <div class="visual-item wide">
+      <img src="images/v3_outdoor_c.png" alt="Terra Nova Outdoor" loading="lazy">
+      <div class="caption"><span class="name">Outdoor Reklam</span><span class="tag badge badge-c">16:9</span></div>
+    </div>
+    <div class="visual-item">
+      <img src="images/v3_social_c.png" alt="Terra Nova Social" loading="lazy">
+      <div class="caption"><span class="name">Sosyal Medya</span><span class="tag badge badge-c">1:1</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- COMPARISON -->
+<!-- ================================================================ -->
+<section id="compare">
+  <div class="section-label">06 / Karsilastirma</div>
+  <h2>Hangi Branding?</h2>
+
+  <table class="compare-table">
+    <tr>
+      <th>Kriter</th>
+      <th><span class="badge badge-a">A</span> Amber Atlas</th>
+      <th><span class="badge badge-b">B</span> Coral Pulse</th>
+      <th><span class="badge badge-c">C</span> Terra Nova</th>
+    </tr>
+    <tr>
+      <td class="label-cell">Ruh</td>
+      <td style="color:#F59E0B">The Institution</td>
+      <td style="color:#F43F5E">The Movement</td>
+      <td style="color:#0D9488">The Sanctuary</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Premium his</td>
+      <td class="high">Cok yuksek</td>
+      <td class="mid">Orta-yuksek</td>
+      <td class="high">Yuksek</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Enerji</td>
+      <td class="mid">Orta-yuksek</td>
+      <td class="high">Cok yuksek</td>
+      <td class="mid">Orta</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Klinik guvenilirlik</td>
+      <td class="mid">Orta</td>
+      <td class="low">Dusuk-orta</td>
+      <td class="high">Cok yuksek</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Istanbul baglantisi</td>
+      <td class="high">Cok yuksek</td>
+      <td class="low">Dusuk</td>
+      <td class="high">Yuksek</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Cinsiyet notrlugu</td>
+      <td class="high">Yuksek</td>
+      <td class="mid">Orta</td>
+      <td class="high">Cok yuksek</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Alanda sahiplenilmemis</td>
+      <td class="high">Evet</td>
+      <td class="mid">Kismi</td>
+      <td class="mid">Kismi</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Sponsora cekicilik</td>
+      <td class="high">Yuksek</td>
+      <td class="mid">Orta</td>
+      <td class="high">Yuksek</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Display font</td>
+      <td>Plus Jakarta Sans</td>
+      <td>Space Grotesk</td>
+      <td>DM Serif Display</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Isik dili</td>
+      <td>Golden hour</td>
+      <td>Gece neon</td>
+      <td>Sabah pencere isigi</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Materyal dili</td>
+      <td>Mermer, altin folyo</td>
+      <td>Akrilik, LED, metal</td>
+      <td>Ahsap, keten, seramik</td>
+    </tr>
+    <tr>
+      <td class="label-cell">Referans</td>
+      <td>Met Gala, Cannes</td>
+      <td>Web Summit, WWDC</td>
+      <td>Aesop, Kinfolk</td>
+    </tr>
+  </table>
+
+  <hr class="divider">
+
+  <div class="footer">
+    <p class="tagline" style="font-size:1.5rem; color:#F59E0B; max-width:none;">Dikkat edin, harika biridir.</p>
+    <p style="margin-top:1rem; font-family:var(--font-mono); font-size:0.7rem; color:#444; max-width:none;">
+      DEHB Summit '26 &middot; Brand Book v3.0 &middot; Mart 2026
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
