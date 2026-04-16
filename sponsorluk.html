@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEHB Summit '26 -Sponsorluk Dosyası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Instrument Serif', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --navy: #1B1B3A;
+  --navy2: #22223F;
+  --gold: #F59E0B;
+  --amber: #B45309;
+  --lgold: #FDE68A;
+  --coral: #F97316;
+  --cream: #FFFBEB;
+  --text: #D8D6F0;
+  --text-muted: #A8A6C8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== PAGE / SLIDE SYSTEM ===== */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SECTION LABEL ===== */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.12;
+  color: var(--cream);
+  margin-bottom: 1.25rem;
+}
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--lgold);
+  margin-bottom: 0.75rem;
+}
+p {
+  max-width: 750px;
+  color: var(--cream);
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  font-weight: 500;
+}
+.tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--lgold);
+}
+.big-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.big-number-label {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+
+/* ===== DECORATIVE ===== */
+.glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.06;
+}
+.glow-gold { background: var(--gold); }
+.glow-coral { background: var(--coral); }
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(245,158,11,0.12);
+  margin: 0;
+  width: 100%;
+}
+
+/* ===== CARDS & GRIDS ===== */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+.card {
+  background: rgba(245,158,11,0.04);
+  border: 1px solid rgba(245,158,11,0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+.card:hover {
+  border-color: rgba(245,158,11,0.28);
+  background: rgba(245,158,11,0.07);
+}
+.card h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.card p { color: var(--cream); margin-bottom: 0; font-size: 1.05rem; line-height: 1.7; font-weight: 500; }
+
+.card-highlight {
+  background: rgba(245,158,11,0.08);
+  border: 1.5px solid rgba(245,158,11,0.3);
+}
+
+/* ===== STAT ROW ===== */
+.stat-row {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.2rem;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+
+/* ===== QUOTE ===== */
+.manifesto-block {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 2;
+  color: var(--cream);
+  max-width: 700px;
+  border-left: 2px solid rgba(245,158,11,0.3);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+.manifesto-block .highlight {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ===== TIER TABLE ===== */
+.tier-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 1.05rem;
+}
+.tier-table th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(245,158,11,0.18);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.tier-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(245,158,11,0.06);
+  color: var(--cream);
+  vertical-align: top;
+  font-weight: 500;
+}
+.tier-table tr:hover td {
+  background: rgba(245,158,11,0.03);
+}
+.tier-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+}
+.check { color: var(--gold); }
+.dash { color: var(--text-muted); opacity: 0.3; }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 2rem 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(245,158,11,0.1));
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-left: -3px;
+}
+.timeline-time {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+.timeline-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+.timeline-desc {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ===== LOGO IMG ===== */
+.logo-img {
+  max-width: 560px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* ===== ORIGAMI TEXTURE ===== */
+.origami-texture {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.origami-texture svg { width: 100%; height: 100%; }
+
+/* Corner accent -angular facets */
+.origami-corner-tr {
+  top: 0; right: 0;
+  width: 320px; height: 320px;
+  opacity: 0.04;
+}
+.origami-corner-bl {
+  bottom: 0; left: 0;
+  width: 280px; height: 280px;
+  opacity: 0.035;
+}
+.origami-edge-right {
+  top: 50%; right: 0;
+  width: 120px; height: 400px;
+  transform: translateY(-50%);
+  opacity: 0.03;
+}
+.origami-band-bottom {
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  opacity: 0.04;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  @page { size: A4 landscape; margin: 14mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #1B1B3A !important; color: #D8D6F0 !important; }
+  .page { min-height: 0; padding: 2.5rem 0; page-break-after: always; }
+  .glow { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================== -->
+<!-- MERAK -Kapak + Hook           -->
+<!-- ============================== -->
+
+<!-- KAPAK -->
+<div class="page" style="justify-content:center; align-items:center; text-align:center;">
+  <div class="glow glow-gold" style="width:600px; height:600px; top:50%; left:50%; transform:translate(-50%,-50%);"></div>
+  <div class="origami-texture origami-band-bottom">
+    <svg viewBox="0 0 1920 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,80 60,40 120,65 180,30 240,55 300,20 360,50 420,25 480,45 540,15 600,40 660,10 720,38 780,18 840,42 900,8 960,35 1020,15 1080,40 1140,20 1200,48 1260,22 1320,50 1380,28 1440,52 1500,30 1560,55 1620,35 1680,58 1740,38 1800,60 1860,42 1920,55 1920,80" fill="#F59E0B"/>
+      <polygon points="0,80 60,55 120,72 180,48 240,65 300,38 360,60 420,42 480,58 540,32 600,52 660,28 720,50 780,35 840,55 900,30 960,50 1020,35 1080,55 1140,38 1200,58 1260,40 1320,60 1380,45 1440,62 1500,48 1560,65 1620,50 1680,68 1740,52 1800,70 1860,55 1920,65 1920,80" fill="#D97706" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="page-inner" style="display:flex; flex-direction:column; align-items:center;">
+    <img src="images/v5_12_origami_transparent.png" alt="DEHB Summit '26 Logo" class="logo-img">
+    <p class="tagline" style="margin-bottom:2.5rem;">Dikkat edin, harika biridir.</p>
+    <p style="font-family:var(--font-mono); font-size:0.95rem; color:rgba(245,158,11,0.6); letter-spacing:0.16em; max-width:none; font-weight:600;">
+      20 KASIM 2026 &middot; İSTANBUL &middot; 1.000+ KATILIMCI
+    </p>
+    <p style="font-family:var(--font-display); font-size:1.1rem; color:var(--text); margin-top:3rem; max-width:none; letter-spacing:0.12em; font-weight:700;">
+      SPONSORLUK DOSYASI
+    </p>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- HOOK -5 MİLYON -->
+<div class="page">
+  <div class="glow glow-gold" style="width:500px; height:500px; top:20%; right:-10%;"></div>
+  <div class="page-inner">
+    <div class="section-label">01 / Neden Buradayız</div>
+    <div class="big-number">5.000.000</div>
+    <div class="big-number-label" style="margin-bottom:2rem;">Türkiye'de tahmini DEHB'li yetişkin sayısı.</div>
+    <p style="font-size:1.05rem; color:var(--cream); max-width:640px;">
+      Bunların <strong style="color:var(--gold);">%80'inden fazlası durumunun farkında değil.</strong> Aileleriyle birlikte 15-20 milyon kişilik bir ekosistem. Dünyada 366 milyon yetişkin DEHB ile yaşıyor (Song ve ark., 2021). Ve bugüne kadar Türkiye'de hiçbir sahne onlar için kurulmamıştı.
+    </p>
+    <div class="grid-3" style="margin-top:2.5rem;">
+      <div class="card">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">%60-80</h4>
+        <p>DEHB'li yetişkinlerin en az bir ek durumla (kaygı, depresyon, öğrenme farklılığı) yaşama oranı.</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;">Kaynak: Faraone ve ark., World Federation of ADHD Consensus, 2021</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">Yönetici İşlevler</h4>
+        <p>DEHB'li bireylerin büyük çoğunluğunda karar verme, zaman yönetimi ve organizasyon becerileri etkilenir -iş ve okul hayatını doğrudan şekillendiren beceriler.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">$89-138 Milyar</h4>
+        <p>Yalnızca ABD'deki DEHB'nin tahmini yıllık ekonomik yükü. Avrupa'da bu rakam €17+ milyar.</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;">Kaynak: Schein ve ark., J Managed Care Spec Pharm, 2022 · Daley ve ark., European Psychiatry, 2020</p>
+      </div>
+    </div>
+    <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem; margin-top:2rem; max-width:700px;">
+      <p style="color:var(--lgold); font-size:0.95rem; margin-bottom:0.5rem;">
+        <strong style="color:var(--gold);">Türkiye Projeksiyonu:</strong> ~3 milyon DEHB'li yetişkin × kişi başına €9.000-15.000 (Avrupa ortalaması) = yıllık <strong style="color:var(--gold);">€27-45 milyar</strong> potansiyel ekonomik etki.
+      </p>
+      <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;">Kaynak: Song ve ark., J Global Health, 2021 · Le ve ark., EJHE, 2014 · TÜİK 2024 nüfus verileriyle uyarlama</p>
+    </div>
+    <p style="font-size:1.05rem; color:var(--text-muted); max-width:640px; margin-top:1.5rem;">
+      DEHB Summit '26, Türkiye'nin ilk ve tek DEHB & Nöroçeşitlilik Zirvesi olarak bu boşluğu dolduruyor.
+    </p>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- EMPATİ -Manifesto              -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="glow glow-coral" style="width:400px; height:400px; bottom:10%; left:-5%;"></div>
+  <div class="page-inner">
+    <div class="section-label">02 / Manifesto</div>
+    <div class="origami-texture origami-corner-tr">
+      <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="320,0 180,0 320,140" fill="#F59E0B"/>
+        <polygon points="180,0 320,140 220,80" fill="#B45309"/>
+        <polygon points="320,140 320,260 260,180" fill="#D97706"/>
+        <polygon points="180,0 220,80 140,60" fill="#F59E0B" opacity="0.6"/>
+        <polygon points="220,80 320,140 260,180 200,120" fill="#E8A317"/>
+        <polygon points="140,60 220,80 200,120 120,100" fill="#B45309" opacity="0.5"/>
+        <polygon points="320,260 320,320 260,320 260,180" fill="#F59E0B" opacity="0.4"/>
+        <polygon points="200,120 260,180 180,200 140,140" fill="#D97706" opacity="0.5"/>
+        <polygon points="120,100 200,120 140,140 80,120" fill="#F59E0B" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="manifesto-block">
+      DEHB, farklı çalışan bir beyin.<br>
+      Bazen yorucu. Bazen parlak. Her zaman gerçek.<br><br>
+      Her DEHB'li çocuğun arkasında cevap arayan bir aile var.<br>
+      Her DEHB'li yetişkinin içinde, çoktan vazgeçilmiş hayaller var.<br>
+      Her uzmanın karşısında, "parlak ama bir türlü odaklanamıyor" denilen biri var.<br><br>
+      Hepimiz aynı şeyi arıyoruz: <span class="highlight">anlaşılmak.</span><br><br>
+      DEHB Summit, bu arayış için bir kapı aralıyor.<br>
+      Aileler, uzmanlar, koçlar, eğitimciler, çalışanlar<br>
+      ve DEHB'yle yaşayan herkes -aynı sahnede.<br><br>
+      Çünkü birlikte biliyoruz:<br>
+      farklı çalışan beyin, farklı gören beyin demek.<br>
+      Ve <span class="highlight">farklı gören beyinler dünyayı değiştirir.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- FIRSAT -Neden Şimdi + Değer   -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="glow glow-gold" style="width:500px; height:500px; top:30%; left:-15%;"></div>
+  <div class="page-inner">
+    <div class="section-label">03 / Neden Şimdi</div>
+    <h2>DEHB farkındalığı tarihinin en yüksek noktasında.</h2>
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card">
+        <h4>%300+ Artış</h4>
+        <p>Son 5 yılda Türkiye'de "DEHB" Google aramalarındaki artış oranı.</p>
+      </div>
+      <div class="card">
+        <h4>25 Milyar+</h4>
+        <p>TikTok'ta #ADHD içeriklerinin toplam görüntülenme sayısı.</p>
+      </div>
+      <div class="card">
+        <h4>$25 Milyar</h4>
+        <p>Global DEHB pazarı büyüklüğü. 2030'da $35 milyar+ projeksiyonu.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem; color:var(--cream);">
+      Nöroçeşitlilik, 2024-2026'nın en hızlı büyüyen Çeşitlilik, Eşitlik ve Kapsayıcılık kategorisi. McKinsey, Deloitte ve Harvard Business Review bu dönüşümü sürekli işliyor. Türkiye'de ise bu alanda kurumsal bir sahne <strong style="color:var(--gold);">henüz yok.</strong>
+    </p>
+    <p style="color:var(--text-muted);"><strong style="color:var(--lgold);">İlk olma avantajı:</strong> Bu alana ilk adım atan marka, "kurucu sponsor" olarak kalıcı şekilde konumlanır.</p>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- SPONSORLUK DEĞERİ -->
+<div class="page">
+  <div class="glow glow-coral" style="width:500px; height:500px; bottom:5%; right:-10%;"></div>
+  <div class="page-inner">
+    <div class="section-label">04 / Sponsorluk Değeri</div>
+    <h2>Neden bu harekete liderlik etmelisiniz?</h2>
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="card">
+        <h4>Kurumsal Sosyal Sorumluluk & Sürdürülebilirlik</h4>
+        <p>SDG 3 (Sağlık), SDG 4 (Eğitim), SDG 8 (İnsana Yakışır İş), SDG 10 (Eşitsizliklerin Azaltılması) ile doğrudan ilişkili. Sürdürülebilirlik raporunuzda somut, ölçülebilir sosyal etki hikayesi.</p>
+      </div>
+      <div class="card">
+        <h4>İşveren Markası</h4>
+        <p>Z kuşağının %77'si işveren seçerken çeşitlilik ve kapsayıcılık politikalarına bakıyor. "Türkiye'nin ilk DEHB Zirvesi'nin yanındayız" güçlü bir işveren markası hikayesi.</p>
+      </div>
+      <div class="card">
+        <h4>İlk Olma Avantajı</h4>
+        <p>Türkiye'de DEHB alanında kurumsal sponsorluk yapan neredeyse hiçbir marka yok. İlk olan marka, alanın "kurucu sponsoru" olarak kalıcı şekilde konumlanır.</p>
+      </div>
+      <div class="card">
+        <h4>Sadık Kitle</h4>
+        <p>DEHB'li bireyler kendilerini anlayan markalara güçlü sadakat gösterir. Bu kitle "müşteri" değil, "marka elçisi" olur.</p>
+      </div>
+    </div>
+    <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem; margin-top:2rem; max-width:700px;">
+      <p style="color:var(--lgold); font-size:0.88rem; margin-bottom:0;">
+        <strong style="color:var(--gold);">JPMorgan Chase -Nöroçeşitlilik Programı:</strong> 2015'te başlattıkları "Autism at Work" programında, nöroçeşitli çalışanlar belirli teknoloji ve kalite kontrol görevlerinde <strong>%48 daha hızlı</strong> ve <strong>%92'ye kadar daha verimli</strong> performans gösterdi.
+      </p>
+      <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;">
+        Kaynak: Austin & Pisano, HBR, 2017 · Doyle, Harvard Business Review, 2024
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- İŞ DÜNYASI -İK Verileri       -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="glow glow-gold" style="width:500px; height:500px; top:10%; right:-12%;"></div>
+  <div class="page-inner">
+    <div class="section-label">05 / İş Dünyası</div>
+    <div class="origami-texture origami-edge-right">
+      <svg viewBox="0 0 120 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="120,0 120,80 60,40" fill="#F59E0B"/>
+        <polygon points="120,80 120,160 80,120 60,40" fill="#B45309"/>
+        <polygon points="60,40 80,120 40,100 20,60" fill="#D97706"/>
+        <polygon points="120,160 120,240 80,200 80,120" fill="#F59E0B" opacity="0.7"/>
+        <polygon points="80,120 80,200 40,180 40,100" fill="#E8A317" opacity="0.6"/>
+        <polygon points="120,240 120,320 80,280 80,200" fill="#B45309" opacity="0.5"/>
+        <polygon points="80,200 80,280 40,260 40,180" fill="#D97706" opacity="0.5"/>
+        <polygon points="120,320 120,400 80,360 80,280" fill="#F59E0B" opacity="0.4"/>
+        <polygon points="40,100 40,180 10,150 10,80" fill="#F59E0B" opacity="0.3"/>
+        <polygon points="40,180 40,260 10,230 10,150" fill="#B45309" opacity="0.3"/>
+      </svg>
+    </div>
+    <h2>Nöroçeşitlilik iş dünyasının gündemi.</h2>
+    <p style="color:var(--text-muted);">Türkiye'de ~33 milyon çalışan nüfusun %3-5'i DEHB ile yaşıyor. Bu, <strong style="color:var(--gold);">1 ila 1,7 milyon çalışan</strong> demek -ve yalnızca %10'u tanı almış durumda.</p>
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card card-highlight">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">22+ gün</h4>
+        <p>DEHB'li çalışan başına yıllık ek verimlilik kaybı. Odaklanma güçlüğü, toplantı verimsizliği ve görev geçişlerindeki sürtünme.</p>
+      </div>
+      <div class="card card-highlight">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">2,2×</h4>
+        <p>DEHB'li çalışanların iş değiştirme oranı. Yüksek turnover, işe alım ve eğitim maliyetlerini katlıyor.</p>
+      </div>
+      <div class="card card-highlight">
+        <h4 style="font-size:2rem; margin-bottom:0.25rem;">$4.300–14.500</h4>
+        <p>Çalışan başına yıllık DEHB maliyeti (ABD verisi). Verimlilik kaybı, devamsızlık ve iş kazası riski dahil.</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;">Kaynak: Schein ve ark., J Managed Care &amp; Specialty Pharmacy, 2022</p>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:1.5rem;">
+      <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem;">
+        <h4 style="color:var(--lgold); margin-bottom:0.75rem;">200 Kişilik Bir Teknoloji Şirketi</h4>
+        <p style="font-size:0.92rem; color:var(--cream); margin-bottom:0.5rem;">10-14 DEHB'li çalışan × verimlilik kaybı + ekstra turnover + devamsızlık = <strong style="color:var(--gold);">yıllık ~₺890.000</strong> görünmez maliyet.</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;">Bu rakam, DEHB'nin iş dünyasında "fark edilmeyen" en büyük verimlilik sızıntısı olduğunu gösteriyor.</p>
+      </div>
+      <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem;">
+        <h4 style="color:var(--lgold); margin-bottom:0.75rem;">Global Öncüler Ne Yapıyor?</h4>
+        <p style="font-size:0.92rem; color:var(--cream); margin-bottom:0;"><strong style="color:var(--gold);">SAP</strong> -12 ülkede Autism@Work programı. <strong style="color:var(--gold);">Microsoft</strong> -Nöroçeşitlilik İşe Alım Programı. <strong style="color:var(--gold);">Goldman Sachs</strong> -Nöroçeşitli staj programı. <strong style="color:var(--gold);">JPMorgan</strong> -%48 daha hızlı, %92'ye kadar daha verimli performans. <strong style="color:var(--gold);">EY</strong> -Neuro-Diverse Excellence Center.</p>
+      </div>
+    </div>
+    <p style="font-size:0.95rem; color:var(--text-muted); margin-top:1.5rem; max-width:700px;">
+      Türkiye'de bu alanda kurumsal bir girişim <strong style="color:var(--lgold);">henüz yok.</strong> DEHB Summit, İK profesyonellerini bu dönüşümle buluşturan ilk platform.
+    </p>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- EĞİTİM DÜNYASI -MEB Verileri  -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="glow glow-coral" style="width:450px; height:450px; bottom:10%; left:-8%;"></div>
+  <div class="page-inner">
+    <div class="origami-texture origami-corner-bl">
+      <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,280 0,160 100,220" fill="#F97316"/>
+        <polygon points="0,160 100,220 60,140" fill="#F59E0B"/>
+        <polygon points="100,220 0,280 140,280 120,240" fill="#D97706"/>
+        <polygon points="60,140 100,220 120,240 100,160" fill="#B45309" opacity="0.7"/>
+        <polygon points="140,280 120,240 200,260 200,280" fill="#F59E0B" opacity="0.5"/>
+        <polygon points="100,160 120,240 160,200 140,140" fill="#F97316" opacity="0.4"/>
+        <polygon points="0,160 60,140 40,100 0,80" fill="#D97706" opacity="0.4"/>
+        <polygon points="200,280 200,260 260,280" fill="#B45309" opacity="0.3"/>
+        <polygon points="40,100 60,140 100,160 80,80" fill="#F59E0B" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="section-label">06 / Eğitim Dünyası</div>
+    <h2>Her sınıfta en az 2 DEHB'li öğrenci var.</h2>
+    <p style="color:var(--text-muted); margin-bottom:2rem;">Türkiye'de <strong style="color:var(--cream);">18 milyon K-12 öğrenci</strong> ve <strong style="color:var(--cream);">1,18 milyon öğretmen</strong> var. DEHB prevalansı %6,5-8,6 ile bunun anlamı:</p>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-number">1,1-1,4M</div><div class="stat-label">Tahmini DEHB'li öğrenci</div></div>
+      <div class="stat"><div class="stat-number">375.653</div><div class="stat-label">Kaynaştırma eğitimi öğrencisi (2024)</div></div>
+      <div class="stat"><div class="stat-number">602.729</div><div class="stat-label">Özel eğitim alan öğrenci</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="card">
+        <h4>Rehber Öğretmen Krizi</h4>
+        <p>MEB normu: ortaokul/lisede 150 öğrenciye 1 PDR uzmanı. Gerçek oran bunun çok altında. 2023'te yalnızca 3.604 yeni PDR kadrosu açıldı -yetersiz bulundu.</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;">Kaynak: MEB 2024-2025 İstatistikleri</p>
+      </div>
+      <div class="card">
+        <h4>BEP Sorunu</h4>
+        <p>Bireyselleştirilmiş Eğitim Programları çoğu zaman "dosyada duran kağıt" olarak kalıyor. Öğretmenler araç, zaman ve eğitim eksikliği yaşıyor. DEHB'ye özel dijital BEP aracı <strong style="color:var(--gold);">mevcut değil.</strong></p>
+      </div>
+    </div>
+    <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem; margin-top:1.5rem;">
+      <p style="color:var(--lgold); font-size:0.92rem; margin-bottom:0.5rem;">
+        <strong style="color:var(--gold);">MEB 2022-2026 Kaynaştırma/Bütünleştirme Ulusal Eylem Planı:</strong> 6.871 özel eğitim öğrencisi, 79.227 veli, 44.176 öğretmen ve 10.220 okul yöneticisi ile yapılan kapsamlı anket çalışması.
+      </p>
+      <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;">MEB'in resmi pozisyonu: "Bu alanda çözüm üretilmesi gerekiyor."</p>
+    </div>
+    <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:1.5rem 2rem; margin-top:1rem; max-width:700px;">
+      <p style="color:var(--lgold); font-size:0.92rem; margin-bottom:0.5rem;">
+        <strong style="color:var(--gold);">Referans -İngiltere PINS Programı:</strong> 9,5 milyon £ yatırım, 2.800 okul, ~300.000 öğrenciye ulaşım. Sonuç: devamsızlık azaldı, davranış iyileşti, öğrenci refahı arttı.
+      </p>
+      <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;">Kaynak: Partnerships for Inclusion of Neurodiversity in Schools (PINS), UK</p>
+    </div>
+    <p style="font-size:0.95rem; color:var(--text-muted); margin-top:1.5rem; max-width:700px;">
+      DEHB Summit, eğitimcilere araç, bilgi ve ağ sunarak bu boşluğu kapatan <strong style="color:var(--lgold);">Türkiye'nin ilk platformu.</strong>
+    </p>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- GÜVEN -Etkinlik + Kitle + Konuşmacı + Topluluk -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="page-inner">
+    <div class="section-label">07 / Etkinlik</div>
+    <h2>Tek gün. Tek sahne. 1.000+ beyin.</h2>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-number">1.000+</div><div class="stat-label">Katılımcı</div></div>
+      <div class="stat"><div class="stat-number">20+</div><div class="stat-label">Konuşmacı</div></div>
+      <div class="stat"><div class="stat-number">2</div><div class="stat-label">Paralel Sahne</div></div>
+      <div class="stat"><div class="stat-number">1</div><div class="stat-label">Gün</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:2rem;">
+      <div>
+        <h3>DEHB-Dostu Mekan Tasarımı</h3>
+        <p>Etkinlik mekanı, DEHB beyninin ihtiyaçlarına göre tasarlanmış bir ortam. Her 40 dakikada bir nefes: 25 dakika konuşma, 15 dakika mola. Hiçbir oturum 25 dakikayı geçmiyor.</p>
+        <p style="color:var(--text-muted); font-size:0.92rem;">Günde 5-6 saat içerik, 2-3 saat mola & deneyim. Mekan detayları netleştirilecektir.</p>
+      </div>
+      <div>
+        <h3>İmza Anları</h3>
+        <p style="color:var(--text-muted);">Açılış seremonisi, interaktif oturumlar ve kapanış ritüeli gibi imza anları tasarlanmaktadır. Detaylar netleştirilecektir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- HEDEF KİTLE -->
+<div class="page">
+  <div class="glow glow-gold" style="width:400px; height:400px; top:10%; right:-10%;"></div>
+  <div class="page-inner">
+    <div class="section-label">08 / Hedef Kitle</div>
+    <h2>Salonda kim olacak?</h2>
+    <div class="grid-4" style="margin-top:2rem;">
+      <div class="card"><h4>Eğitimciler</h4><p>Öğretmenler, rehberlik ve psikolojik danışmanlar. DEHB farkındalığında en kritik rol.</p></div>
+      <div class="card"><h4>İnsan Kaynakları Uzmanları</h4><p>Nöroçeşitli işe alım, çalışan deneyimi, işveren markası. Kurumsal karar vericiler.</p></div>
+      <div class="card"><h4>Uzmanlar & Koçlar</h4><p>Psikiyatristler, psikologlar, DEHB koçları. Profesyonel gelişim ve sertifikasyon.</p></div>
+      <div class="card"><h4>Bireyler & Aileler</h4><p>DEHB'li yetişkinler, ebeveynler. Strateji, topluluk, ilham. Güçlü marka sadakati.</p></div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- KONUŞMACILAR -->
+<div class="page">
+  <div class="page-inner">
+    <div class="section-label">09 / Konuşmacılar</div>
+    <h2>Üç katmanlı konuşmacı stratejisi.</h2>
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card card-highlight">
+        <h4 style="font-size:0.72rem; letter-spacing:0.1em; margin-bottom:1rem;">KATMAN 1 -KÜRESEL OTORİTELER</h4>
+        <p style="color:var(--cream); font-size:0.95rem; margin-bottom:0.75rem;">Zirvenin felsefi omurgası.</p>
+        <p>Carol Dweck (Gelişim Zihniyeti), Martin Seligman (Pozitif Psikoloji), Jodi Sleeper-Triplett (DEHB Koçluğu) kalibresinde isimler.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.72rem; letter-spacing:0.1em; margin-bottom:1rem;">KATMAN 2 -YAŞAYAN KANITLAR</h4>
+        <p style="color:var(--cream); font-size:0.95rem; margin-bottom:0.75rem;">DEHB'nin güç olduğunu kanıtlayanlar.</p>
+        <p>Tim Burton, Tom Holland, Siena Castellon gibi ilham veren isimler.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:0.72rem; letter-spacing:0.1em; margin-bottom:1rem;">KATMAN 3 -TÜRKİYE SESİ</h4>
+        <p style="color:var(--cream); font-size:0.95rem; margin-bottom:0.75rem;">Yerel uygulama ve perspektif.</p>
+        <p>Kariyer stratejistleri, psikiyatristler, DEHB koçları, eğitimciler, girişimciler -Türkiye'nin kendi sesi.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- TOPLULUK -->
+<div class="page" style="min-height:auto; padding:4rem 2rem;">
+  <div class="page-inner">
+    <div class="section-label">10 / Arkamızdaki Topluluk</div>
+    <h2>Sıfırdan başlamıyoruz.</h2>
+    <p style="margin-bottom:2rem; color:var(--text-muted);">DEHB Summit, mevcut bir ekosistemin üzerine inşa ediliyor.</p>
+    <div class="grid-3">
+      <div class="card card-highlight">
+        <h4>İz Koçluk</h4>
+        <p>DEHB koçluğu alanında aktif profesyonel ağ ve danışan topluluğu.</p>
+      </div>
+      <div class="card card-highlight">
+        <h4>Dopalive</h4>
+        <p>Türkiye'nin DEHB odaklı dijital bilgi platformu. İçerik, rehber ve topluluk kaynaklarıyla büyüyen organik kitle.</p>
+      </div>
+      <div class="card card-highlight">
+        <h4>Yol Arkadaşları</h4>
+        <p>Elgiz Henden (Kurucu), Alperen Demirdöğer (Topluluk) -DEHB ekosistemine doğrudan bağlı bir çekirdek kadro.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SAHİPLENME -Paketler + Deneyim + Program -->
+<!-- ============================== -->
+<hr class="divider">
+<div class="page">
+  <div class="origami-texture origami-band-bottom">
+    <svg viewBox="0 0 1920 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,80 0,40 80,60 160,30 240,55 320,20 400,50 480,25 560,45 640,15 720,40 800,10 880,35 960,5 1040,30 1120,10 1200,35 1280,15 1360,40 1440,20 1520,45 1600,25 1680,50 1760,30 1840,55 1920,40 1920,80" fill="#F59E0B"/>
+      <polygon points="0,80 0,55 80,70 160,50 240,65 320,40 400,60 480,45 560,55 640,35 720,50 800,30 880,48 960,25 1040,45 1120,32 1200,50 1280,35 1360,55 1440,40 1520,58 1600,42 1680,60 1760,48 1840,65 1920,55 1920,80" fill="#B45309" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="page-inner">
+    <div class="section-label">11 / Sponsorluk Katmanları</div>
+    <h2>Bu sahneyi birlikte kuruyoruz.</h2>
+    <p style="margin-bottom:2rem; color:var(--text-muted);">Her katman, markanızın etkinliğe entegrasyonunun derinliğini belirler. Paket bedelleri aşağıdaki gibidir; teslimatlar ve ek haklar görüşme kapsamında netleştirilir.</p>
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th style="width:16%;">Katman</th>
+          <th style="width:8%;">Kontenjan</th>
+          <th style="width:15%;">Bedel</th>
+          <th>Sahne & Logo</th>
+          <th>Stant</th>
+          <th>Bilet</th>
+          <th>Konuşma</th>
+          <th>Dijital</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tier-name">İsim Sponsoru</span></td>
+          <td style="font-family:var(--font-mono); color:var(--coral);">1</td>
+          <td style="font-family:var(--font-mono); color:var(--gold);">35.000 € + KDV</td>
+          <td><span class="check">◆</span> "DEHB Summit, [Marka] sunumuyla" -her yerde</td>
+          <td><span class="check">◆</span> Premium</td>
+          <td><span class="check">◆</span> 20 VIP</td>
+          <td><span class="check">◆</span> Özel slot</td>
+          <td><span class="check">◆</span> Tüm kanallarda</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Platin Sponsor</span></td>
+          <td style="font-family:var(--font-mono); color:var(--coral);">2</td>
+          <td style="font-family:var(--font-mono); color:var(--gold);">17.500 € + KDV</td>
+          <td><span class="check">◆</span> Ana sahnede logo</td>
+          <td><span class="check">◆</span> Premium</td>
+          <td><span class="check">◆</span> 10 VIP</td>
+          <td><span class="check">◆</span> 15 dk spotlight</td>
+          <td><span class="check">◆</span> Tüm dijitalde</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Altın Sponsor</span></td>
+          <td style="font-family:var(--font-mono);">4</td>
+          <td style="font-family:var(--font-mono); color:var(--gold);">9.750 € + KDV</td>
+          <td><span class="check">◆</span> Sahnede logo (ikincil)</td>
+          <td><span class="check">◆</span> Stant</td>
+          <td><span class="check">◆</span> 5 VIP</td>
+          <td><span class="dash">-</span></td>
+          <td><span class="check">◆</span> Web + sosyal</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Gümüş Sponsor</span></td>
+          <td style="font-family:var(--font-mono);">8</td>
+          <td style="font-family:var(--font-mono); color:var(--gold);">7.750 € + KDV</td>
+          <td><span class="dash">-</span></td>
+          <td><span class="check">◆</span> Stant</td>
+          <td><span class="check">◆</span> Katılım hakları</td>
+          <td><span class="dash">-</span></td>
+          <td><span class="check">◆</span> Web'de logo</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Bronz Sponsor</span></td>
+          <td style="font-family:var(--font-mono);">15</td>
+          <td style="font-family:var(--font-mono); color:var(--gold);">5.750 € + KDV</td>
+          <td><span class="dash">-</span></td>
+          <td><span class="check">◆</span> Masa</td>
+          <td><span class="check">◆</span> Katılım hakları</td>
+          <td><span class="dash">-</span></td>
+          <td><span class="check">◆</span> Web'de logo</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem; color:var(--text-muted); margin-top:1rem;">
+      <strong style="color:var(--lgold);">Kategori münhasırlığı</strong> mevcuttur. İlaç/Farma, dijital sağlık, gıda/içecek gibi sektörlerde sınırlı sponsor kabul edilir.
+    </p>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- ÜRÜN VE HİZMET SPONSORLUKLARI -->
+<div class="page">
+  <div class="page-inner">
+    <div class="section-label">12 / Ürün ve Hizmet Sponsorlukları</div>
+    <h2>Operasyonel kaliteyi birlikte yükseltiyoruz.</h2>
+    <p style="color:var(--text-muted); margin-bottom:2rem;">Bu başlıklar altındaki iş birlikleri, sağlanacak hizmetin kapsamı ve piyasa değerine göre ayrıca görüşülerek projelendirilecektir.</p>
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th style="width:28%;">Kategori</th>
+          <th>Kapsam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tier-name">Ulaşım Sponsoru</span><br><span style="color:var(--text-muted); font-size:0.74rem;">Uluslararası & Şehir İçi</span></td>
+          <td>Yurt dışı uçuş operasyonları (Official Carrier), şehirler arası ulaşım ve etkinlik süresince VIP transfer süreçleri.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Konaklama Sponsoru</span></td>
+          <td>Konuşmacıların, uzmanların ve organizasyon ekibinin ağırlanması.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Simültane Çeviri ve Dil Sponsoru</span></td>
+          <td>Uluslararası oturumlar için profesyonel tercüme hizmeti ve teknik kulaklık sistemleri altyapısı.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Teknolojik Altyapı Sponsoru</span></td>
+          <td>Kesintisiz yüksek hızlı internet, etkinlik alanı dijital çözümleri, canlı yayın ve teknik donanım desteği.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">İletişim ve PR Sponsoru</span></td>
+          <td>Basın bülteni yönetimi, medya ilişkileri, röportaj organizasyonları ve dijital pazarlama süreçleri.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">Operasyonel Destek ve Baskı Sponsoru</span></td>
+          <td>Etkinlik alanı görsel uygulamaları, basılı materyaller ve kayıt masası yönetim sistemleri.</td>
+        </tr>
+        <tr>
+          <td><span class="tier-name">İkram Sponsoru</span></td>
+          <td>Gün boyu sürecek profesyonel kahve molaları ve öğle yemeği organizasyonları.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- GALA -->
+<div class="page" style="min-height:auto; padding:4rem 2rem;">
+  <div class="page-inner">
+    <div class="section-label">13 / Gala Yemeği Sponsorluğu</div>
+    <h2>Zirvenin en prestijli anına isminizi verin.</h2>
+    <div class="card card-highlight" style="margin-top:1.5rem;">
+      <h4>Gala Yemeği Sponsorluğu (Exclusive)</h4>
+      <p>Konuşmacılar, protokol üyeleri ve VIP katılımcıların bir araya geleceği bu özel akşamın tek ev sahibi olarak; açılış konuşması yapma, özel markalama hakları ve kurumsal video gösterimi gibi ayrıcalıklarla markanızı zirveye taşıyın.</p>
+      <p style="color:var(--text-muted); margin-bottom:0;">Detaylar ayrıca görüşülecektir.</p>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- BİLETLER -->
+<div class="page">
+  <div class="page-inner">
+    <div class="section-label">14 / Katılım Biletleri</div>
+    <h2>Zirve deneyiminizi özelleştirin.</h2>
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="card card-highlight">
+        <h4>VIP Katılım Bileti</h4>
+        <p style="font-family:var(--font-mono); color:var(--gold); font-size:1.1rem;">27.500 TL</p>
+        <p>Gala yemeği katılımı, özel networking alanı, öncelikli giriş ve oturumlarda ön sıralarda ayrılmış koltuk garantisi.</p>
+      </div>
+      <div>
+        <table class="tier-table">
+          <thead>
+            <tr>
+              <th>Dönem</th>
+              <th>Tarih</th>
+              <th>Fiyat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-name">Erken Kayıt</span></td>
+              <td>Temmuz - Ağustos</td>
+              <td style="font-family:var(--font-mono); color:var(--gold);">9.750 TL</td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">Standart Kayıt</span></td>
+              <td>Eylül - Ekim</td>
+              <td style="font-family:var(--font-mono); color:var(--gold);">10.750 TL</td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">Son Dönem Kayıt</span></td>
+              <td>Kasım</td>
+              <td style="font-family:var(--font-mono); color:var(--gold);">11.750 TL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- PROGRAM -->
+<div class="page">
+  <div class="page-inner">
+    <div class="section-label">15 / Program</div>
+    <h2>20 Kasım 2026 -Gün Akışı</h2>
+    <p style="color:var(--text-muted);">Program detayları netleştirilecektir.</p>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- ERİŞİM -->
+<div class="page">
+  <div class="glow glow-gold" style="width:500px; height:500px; top:20%; left:-10%;"></div>
+  <div class="page-inner">
+    <div class="section-label">16 / Erişim Projeksiyonu</div>
+    <h2>Markanızın göreceği sahne.</h2>
+    <div class="stat-row" style="margin-top:2rem;">
+      <div class="stat"><div class="stat-number">1M+</div><div class="stat-label">Medya erişimi</div></div>
+      <div class="stat"><div class="stat-number">500K+</div><div class="stat-label">Sosyal medya erişimi</div></div>
+      <div class="stat"><div class="stat-number">50+</div><div class="stat-label">Basın haberi</div></div>
+      <div class="stat"><div class="stat-number">50K+</div><div class="stat-label">Web ziyaretçisi</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:2.5rem;">
+      <div>
+        <h3>Etkinlik Öncesi</h3>
+        <p style="font-size:0.88rem;">6 aylık pazarlama kampanyası. Instagram, LinkedIn, X, YouTube, TikTok -5 kanalda aktif varlık.</p>
+      </div>
+      <div>
+        <h3>Etkinlik Sonrası</h3>
+        <p style="font-size:0.88rem;">Highlight videosu, konuşmacı videoları, NPS raporu. Sponsor logonuz 30 gün boyunca tüm post-event içeriklerde.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- İLKELER -->
+<div class="page" style="min-height:auto; padding:4rem 2rem;">
+  <div class="page-inner">
+    <div class="section-label">17 / İlkelerimiz</div>
+    <h2>Sponsorluk ilkelerimiz.</h2>
+    <div class="grid-4" style="margin-top:1.5rem;">
+      <div class="card"><h4>Şeffaflık</h4><p>Tüm sponsor ilişkileri açıkça belirtilir.</p></div>
+      <div class="card"><h4>İçerik Bağımsızlığı</h4><p>Sponsor, konuşmacı seçimini veya bilimsel programı etkileyemez.</p></div>
+      <div class="card"><h4>Değer Uyumu</h4><p>DEHB'yi stigmatize eden markalar kabul edilmez.</p></div>
+      <div class="card"><h4>Veri Gizliliği</h4><p>Katılımcı listeleri sponsorlara satılmaz. KVKK uyumlu.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- AKSİYON -Hedefler + Yakında + CTA -->
+<!-- ============================== -->
+<hr class="divider">
+
+<!-- NETLEŞTİRİLECEK -->
+<div class="page" style="min-height:auto; padding:4rem 2rem;">
+  <div class="page-inner">
+    <div class="section-label">18 / Yakında</div>
+    <h2>Netleşme aşamasındaki detaylar.</h2>
+    <p style="margin-bottom:2rem; color:var(--text-muted);">Aşağıdaki başlıklar aktif çalışma sürecindedir. Güncel bilgiler görüşmelerde paylaşılacaktır.</p>
+    <div class="grid-3">
+      <div class="card" style="border-style:dashed;"><h4 style="color:var(--text-muted);">Mekan</h4><p style="color:var(--text-muted);">Premium mekan seçimi devam etmektedir. DEHB-dostu tasarım prensipleri belirlenmiştir.</p></div>
+      <div class="card" style="border-style:dashed;"><h4 style="color:var(--text-muted);">Kurumsal Paketler</h4><p style="color:var(--text-muted);">Toplu katılım ve kurum içi ekip katılım modelleri ayrıca projelendirilecektir.</p></div>
+      <div class="card" style="border-style:dashed;"><h4 style="color:var(--text-muted);">Gala Uygulama Detayları</h4><p style="color:var(--text-muted);">Exclusive gala sponsorluğu kapsamı ve uygulama planı görüşmelerde netleşecektir.</p></div>
+      <div class="card" style="border-style:dashed;"><h4 style="color:var(--text-muted);">Medya Ortaklıkları</h4><p style="color:var(--text-muted);">Basın ve dijital medya ortaklıkları için görüşmeler sürmektedir.</p></div>
+      <div class="card" style="border-style:dashed;"><h4 style="color:var(--text-muted);">Kesinleşen Konuşmacılar</h4><p style="color:var(--text-muted);">Davet süreci devam etmektedir. Duyurular aşamalı yapılacaktır.</p></div>
+    </div>
+  </div>
+</div>
+<hr class="divider">
+
+<!-- CTA -->
+<div class="page" style="justify-content:center; align-items:center; text-align:center;">
+  <div class="glow glow-gold" style="width:600px; height:600px; top:50%; left:50%; transform:translate(-50%,-50%);"></div>
+  <div class="origami-texture origami-corner-tr" style="width:400px; height:400px; opacity:0.03;">
+    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="400,0 250,0 400,150" fill="#F59E0B"/>
+      <polygon points="250,0 400,150 300,80" fill="#B45309"/>
+      <polygon points="400,150 400,300 340,220" fill="#D97706"/>
+      <polygon points="250,0 300,80 200,50" fill="#F59E0B" opacity="0.6"/>
+      <polygon points="300,80 400,150 340,220 270,140" fill="#E8A317"/>
+      <polygon points="200,50 300,80 270,140 160,100" fill="#B45309" opacity="0.5"/>
+      <polygon points="400,300 400,400 340,400 340,220" fill="#F59E0B" opacity="0.4"/>
+      <polygon points="270,140 340,220 240,260 180,180" fill="#D97706" opacity="0.4"/>
+      <polygon points="160,100 270,140 180,180 100,140" fill="#F59E0B" opacity="0.25"/>
+    </svg>
+  </div>
+  <div class="origami-texture origami-corner-bl" style="width:350px; height:350px; opacity:0.03;">
+    <svg viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,350 0,200 120,280" fill="#F97316"/>
+      <polygon points="0,200 120,280 80,180" fill="#F59E0B"/>
+      <polygon points="120,280 0,350 180,350 150,310" fill="#D97706"/>
+      <polygon points="80,180 120,280 150,310 120,200" fill="#B45309" opacity="0.6"/>
+      <polygon points="180,350 150,310 250,330 250,350" fill="#F59E0B" opacity="0.4"/>
+      <polygon points="120,200 150,310 200,260 170,170" fill="#F97316" opacity="0.35"/>
+    </svg>
+  </div>
+  <div class="page-inner" style="display:flex; flex-direction:column; align-items:center;">
+    <h2 style="max-width:600px;">Bu harekete liderlik eden markalar arasında yerinizi alın.</h2>
+    <p class="tagline" style="margin:1.5rem 0 2.5rem; max-width:500px;">
+      15 dakikalık bir tanışma görüşmesine ne dersiniz?
+    </p>
+    <div style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.2); border-radius:16px; padding:2.5rem; max-width:500px; width:100%;">
+      <p style="font-family:var(--font-display); font-weight:700; font-size:1.1rem; color:var(--cream); margin-bottom:1.5rem; max-width:none;">Elgiz Henden</p>
+      <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:0.5rem; max-width:none;">DEHB Summit '26 -Kurucu</p>
+      <p style="font-family:var(--font-mono); font-size:0.82rem; color:var(--gold); margin-bottom:0; max-width:none;">
+        info@dehbsummit.com
+      </p>
+    </div>
+    <p style="font-family:var(--font-mono); font-size:0.68rem; color:var(--text-muted); margin-top:3rem; max-width:none; opacity:0.5;">
+      DEHB SUMMIT '26 &middot; SPONSORLUK DOSYASI &middot; 20 KASIM 2026 &middot; İSTANBUL
+    </p>
+  </div>
+</div>
+
+<!-- ================================================================ -->
+<!-- FOOTER -->
+<!-- ================================================================ -->
+<div class="footer">
+  <hr class="divider" style="margin-bottom:2rem;">
+  <p class="tagline" style="font-size:1.3rem; color:var(--gold); max-width:none;">Dikkat edin, harika biridir.</p>
+  <p style="margin-top:0.75rem; font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted); max-width:none; opacity:0.4;">
+    dehbsummit.com &middot; #DEHBSummit26
+  </p>
+</div>
+
+</body>
+</html>
